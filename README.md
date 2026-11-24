@@ -8,7 +8,7 @@ A deterministic paper trading bot for make.fun's "Pump.fun Replay Sprint — Pap
 
 ## Strategy
 
-Ride the early pump, never marry a coin. In the dev window the median coin ends below the price of its first trade while its median peak is +34%, so the bot only buys a coin that is already moving up with buy-side dominance, buys a small tranche capped at 1% of the coin's real SOL reserve, pyramids at most twice more while the move keeps going, and exits on a fixed take-profit (+25%), a fixed stop-loss (-12%), a trailing stop once the trade is in profit, or a staleness rule when the coin stops moving.
+Snipe the very first buying, in tiny size, with a hard budget on round trips. In the dev window the median coin ends below the price of its first trade while its median peak is +34%, and a round trip costs roughly 3% in fees — so the bot only buys a coin on its 2nd to 8th trade when at least two of the last three trades are buys and real reserves are already at least 2 SOL, risks exactly 0.02 SOL per coin, takes profit at +40% or cuts at -10%, trails winners once they are up 10%, exits stale coins, and stops entering entirely after 35 completed round trips. The other ~9.3 SOL simply stays in cash.
 
 No clock, no randomness, no network: every decision is a pure function of the batches the harness delivers, so two runs on the same data produce the same action log.
 
