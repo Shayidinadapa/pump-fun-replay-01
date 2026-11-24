@@ -1,0 +1,1 @@
+{"description":"Deterministic paper trading bot for the Pump.fun Replay Sprint on make.fun: rides early bonding-curve momentum with fixed take-profit, stop-loss and trailing exits.","engines":{"node":">=22.18"},"license":"MIT","name":"pump-fun-replay-01","scripts":{"start":"node main.ts"},"type":"module","version":"1.0.0"}
